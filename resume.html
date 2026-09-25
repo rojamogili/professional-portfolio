@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --panel: #ffffff;
+        --text: #102033;
+        --muted: #52657a;
+        --line: #dfe7f4;
+        --primary: #4f7cff;
+        --accent: #62e0c8;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        padding: 48px 20px;
+      }
+
+      .resume-page {
+        max-width: 980px;
+        margin: 0 auto;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 24px 60px rgba(16, 32, 51, 0.08);
+        overflow: hidden;
+      }
+
+      .resume-header {
+        background: linear-gradient(135deg, #0f1d2e, #163453 40%, #254d6d);
+        color: #edf4ff;
+        padding: 44px 56px 32px;
+      }
+
+      .resume-header h1 {
+        font-size: clamp(2.2rem, 4vw, 3rem);
+        letter-spacing: -0.05em;
+      }
+
+      .resume-header p {
+        margin-top: 0.4rem;
+        color: rgba(237, 244, 255, 0.8);
+      }
+
+      .resume-content {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 28px;
+        padding: 36px 56px 52px;
+      }
+
+      .section-block {
+        margin-bottom: 30px;
+      }
+
+      .section-title {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--primary);
+        font-weight: 800;
+        margin-bottom: 14px;
+      }
+
+      .section-block p,
+      .section-block li {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .job {
+        margin-bottom: 18px;
+      }
+
+      .job-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 6px;
+      }
+
+      .job-head h3 {
+        font-size: 1.08rem;
+      }
+
+      .job-head span {
+        color: var(--primary);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin-bottom: 8px;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .skills span {
+        display: inline-flex;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(79, 124, 255, 0.08);
+        border: 1px solid rgba(79, 124, 255, 0.18);
+        color: var(--text);
+        font-weight: 600;
+        font-size: 0.8rem;
+      }
+
+      .contact-list {
+        list-style: none;
+        display: grid;
+        gap: 10px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        padding: 0 56px 32px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.8rem 1.2rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .primary {
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        color: #071520;
+      }
+
+      .secondary {
+        border: 1px solid var(--line);
+        color: var(--text);
+      }
+
+      @media (max-width: 760px) {
+        .resume-content {
+          grid-template-columns: 1fr;
+        }
+
+        .resume-header,
+        .resume-content,
+        .actions {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+
+        .job-head {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="resume-page">
+      <header class="resume-header">
+        <h1>Roja Mogili</h1>
+        <p>Senior Full Stack Developer • AI & Enterprise Application Specialist</p>
+      </header>
+
+      <div class="resume-content">
+        <div>
+          <section class="section-block">
+            <h2 class="section-title">Profile</h2>
+            <p>
+              Full-Stack Developer with 6+ years of experience building scalable web and
+              enterprise applications across healthcare, manufacturing, finance, and
+              enterprise platforms. Skilled in solution design, database architecture,
+              API integration, cloud technologies, and AI-driven development. Experienced
+              in end-to-end application development, team collaboration, performance
+              optimization, and delivering secure, reliable solutions aligned with business needs.
+            </p>
+          </section>
+
+          <section class="section-block">
+            <h2 class="section-title">Experience</h2>
+
+            <div class="job">
+              <div class="job-head">
+                <h3>Application Development Senior Analyst</h3>
+                <span>Apr 2025 — Present</span>
+              </div>
+              <p class="meta">Evernorth Health Services (Cigna), Hyderabad</p>
+              <p>
+                Partnered with healthcare stakeholders to translate business needs into scalable platform solutions,
+                design application architecture, and build secure, high-impact digital experiences. Led task planning
+                and delivery coordination, guided team execution, reviewed implementation quality, and supported
+                end-to-end release readiness while evaluating AI-driven development workflows to improve speed,
+                consistency, and production reliability.
+              </p>
+            </div>
+
+            <div class="job">
+              <div class="job-head">
+                <h3>Senior Software Engineer</h3>
+                <span>Apr 2022 — Apr 2025</span>
+              </div>
+              <p class="meta">Tech Vedika Software Pvt Ltd, Hyderabad</p>
+              <p>
+                Worked with clients and internal teams to convert business requirements into scalable enterprise web
+                products, lead implementation planning, mentor developers, and improve code quality through reviews,
+                integration work, and technical guidance. Built and maintained production-grade applications across
+                cloud, API, and data layers while improving system stability, maintainability, and delivery efficiency.
+              </p>
+            </div>
+
+            <div class="job">
+              <div class="job-head">
+                <h3>Intern & Software Engineer</h3>
+                <span>Dec 2019 — Apr 2022</span>
+              </div>
+              <p class="meta">Connetin (Verbindung Geschaft pvt ltd.), Visakhapatnam</p>
+              <p>
+                Built full-stack web applications, collaborated with cross-functional teams to understand requirements,
+                support debugging and enhancements, and deliver reliable product updates across multiple service areas.
+                Reviewed code, improved application quality, and strengthened deployment and operational stability while
+                growing hands-on expertise in modern engineering practices and team-based delivery.
+              </p>
+            </div>
+          </section>
+
+          <section class="section-block">
+            <h2 class="section-title">Education</h2>
+            <p><strong>6-Year Integrated B.Tech (Computer Science and Engineering)</strong><br />Rajiv Gandhi University of Knowledge and Technologies, Nuzvid<br />2014 - 2020 | CGPA: 8.58</p>
+          </section>
+        </div>
+
+        <aside>
+          <section class="section-block">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills">
+              <span>React</span>
+              <span>Angular</span>
+              <span>TypeScript</span>
+              <span>Node.js</span>
+              <span>FastAPI</span>
+              <span>Django</span>
+              <span>PostgreSQL</span>
+              <span>Docker</span>
+              <span>OpenShift</span>
+              <span>CI/CD</span>
+              <span>AI Models</span>
+              <span>LLM</span>
+              <span>GenAI</span>
+              <span>Cloud</span>
+            </div>
+          </section>
+
+          <section class="section-block">
+            <h2 class="section-title">Contact</h2>
+            <ul class="contact-list">
+              <li>Vizag, AP 530017</li>
+              <li>+91 9133892252</li>
+              <li>mogiliroja@gmail.com</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <div class="actions">
+        <a class="button primary" href="index.html">Back to Portfolio</a>
+        <a class="button secondary" href="files/Roja Mogili Resume.pdf" target="_blank" rel="noopener noreferrer">Open PDF</a>
+      </div>
+    </div>
+  </body>
+</html>
