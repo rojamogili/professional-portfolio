@@ -81,4 +81,25 @@ projectToggles.forEach((button) => {
   });
 });
 
+const qrDialog = document.getElementById('contact-qr-dialog');
+const qrDialogTitle = document.getElementById('qr-dialog-title');
+const qrDialogImage = document.querySelector('.qr-dialog-image');
+const qrDialogClose = document.querySelector('.qr-dialog-close');
+
+if (qrDialog && qrDialogTitle && qrDialogImage && qrDialogClose) {
+  document.querySelectorAll('.qr-trigger').forEach((button) => {
+    button.addEventListener('click', () => {
+      qrDialogTitle.textContent = button.dataset.qrTitle || 'Contact QR code';
+      qrDialogImage.src = button.dataset.qrSrc || '';
+      qrDialogImage.alt = button.dataset.qrAlt || 'Contact QR code';
+      qrDialog.showModal();
+    });
+  });
+
+  qrDialogClose.addEventListener('click', () => qrDialog.close());
+  qrDialog.addEventListener('click', (event) => {
+    if (event.target === qrDialog) qrDialog.close();
+  });
+}
+
 

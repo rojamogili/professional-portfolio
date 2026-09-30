@@ -113,7 +113,7 @@
                   </div>
                   <div>
                     <span>LinkedIn</span>
-                    <strong>linkedin.com/in/roja-mogili</strong>
+                    <strong><a class="profile-link" href="https://www.linkedin.com/in/roja-mogili" target="_blank" rel="noopener noreferrer">linkedin.com/in/roja-mogili</a></strong>
                   </div>
                 </div>
               </div>
@@ -868,11 +868,13 @@
               <div class="contact-action">
                 <span class="contact-label">Email me</span>
                 <a class="button primary" href="mailto:mogiliroja@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Roja,%0A%0APlease%20share%20the%20details%20about%20the%20role%20or%20project.%0A%0AName:%0AEmail:%0ACompany:%0AProject%20or%20role%20details:%0A">mogiliroja@gmail.com</a>
+                <button class="button secondary qr-trigger" type="button" data-qr-src="files/email-qr.svg" data-qr-title="Email Roja Mogili" data-qr-alt="QR code to send an email to mogiliroja@gmail.com">View QR</button>
               </div>
 
               <div class="contact-action">
                 <span class="contact-label">Message me</span>
-                <a class="button secondary" href="https://wa.me/919133892252?text=Hello%20Roja,%0A%0AI%20want%20to%20connect%20about%20a%20role%20or%20project.%0A%0AName:%0AEmail:%0ACompany:%0AProject%20details:%0A" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a class="button primary" href="https://wa.me/919133892252?text=Hello%20Roja,%0A%0AI%20want%20to%20connect%20about%20a%20role%20or%20project.%0A%0AName:%0AEmail:%0ACompany:%0AProject%20details:%0A" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <button class="button secondary qr-trigger" type="button" data-qr-src="files/whatsapp-qr.svg" data-qr-title="Connect on WhatsApp" data-qr-alt="QR code to start a WhatsApp chat with +91 91338 92252">View QR</button>
               </div>
 
               <p class="contact-note">
@@ -880,6 +882,14 @@
               </p>
             </div>
           </div>
+          <dialog class="qr-dialog" id="contact-qr-dialog" aria-labelledby="qr-dialog-title">
+            <div class="qr-dialog-header">
+              <h3 id="qr-dialog-title"></h3>
+              <button class="button secondary qr-dialog-close" type="button">Close</button>
+            </div>
+            <img class="qr-dialog-image" alt="" />
+            <p class="qr-dialog-note">Scan this code with your phone.</p>
+          </dialog>
         </section>
       </main>
 

@@ -406,9 +406,8 @@ p {
   border: 1px solid var(--line);
 }
 
-.communication-card {
+.card-details > .communication-card {
   display: block;
-  padding: 0.9rem 1rem;
 }
 
 .communication-card > span {
@@ -418,7 +417,7 @@ p {
 
 .communication-pair {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
   gap: 0.9rem;
 }
 
@@ -434,6 +433,15 @@ p {
   text-transform: uppercase;
 }
 
+.communication-pair div:last-child {
+  min-width: 0;
+  text-align: right;
+}
+
+.communication-pair strong {
+  overflow-wrap: anywhere;
+}
+
 .card-details span {
   color: var(--muted);
   font-size: 0.8rem;
@@ -442,6 +450,17 @@ p {
 .card-details strong {
   font-size: 0.86rem;
   color: var(--text);
+}
+
+.profile-link {
+  text-decoration: underline;
+  text-decoration-color: rgba(98, 224, 200, 0.65);
+  text-underline-offset: 3px;
+}
+
+.profile-link:hover,
+.profile-link:focus-visible {
+  color: var(--accent);
 }
 
 .about-grid,
@@ -877,6 +896,60 @@ p {
   gap: 0.7rem;
 }
 
+.qr-dialog {
+  width: min(360px, calc(100% - 2rem));
+  margin: auto;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #0f172a;
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.qr-dialog::backdrop {
+  background: rgba(3, 8, 18, 0.78);
+  backdrop-filter: blur(3px);
+}
+
+.qr-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.qr-dialog-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.qr-dialog-close {
+  padding: 0.55rem 0.8rem;
+  flex-shrink: 0;
+}
+
+.qr-dialog-header .qr-dialog-close {
+  width: auto;
+}
+
+.qr-dialog-image {
+  display: block;
+  width: min(100%, 240px);
+  height: auto;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.qr-dialog-note {
+  margin: 0.9rem 0 0;
+  color: var(--muted);
+  text-align: center;
+}
+
 .contact-label {
   color: var(--muted);
   font-size: 0.78rem;
@@ -1129,14 +1202,25 @@ p {
     font-size: 1.8rem;
   }
 
-  .card-details > div {
-    flex-direction: column;
-    align-items: flex-start;
+  .card-details > div:not(.communication-card) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+    align-items: center;
     padding: 0.75rem 0.8rem;
   }
 
+  .card-details > .communication-card {
+    padding: 0.75rem 0.8rem;
+  }
+
+  .card-details > div:not(.communication-card) strong {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    text-align: right;
+  }
+
   .communication-pair {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
   }
 
   .tags span {
